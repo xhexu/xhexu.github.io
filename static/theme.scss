@@ -1,0 +1,79 @@
+$blue_color: rgba(64, 158, 255, .9);
+
+$green_color : #00d1b2;
+
+$orange_color : #f4b976;
+
+$pink_color : #f39894;
+
+$cyan_color : #26b6be;
+
+@mixin theme($bg) {
+  .nav-bar{
+    background-color: $bg;
+    border-bottom: 1px solid $bg;
+  }
+  .read{
+    nav.read-bar{
+      box-shadow: 0 1px 2px 0 $bg;
+      &-choose{
+        color: $bg;
+      }
+      li:hover{
+        color: $bg;
+      }
+    }
+  }
+  .edit{
+    &-left{
+      &-list{
+        color: $bg;
+      }
+      &-choose,&-list:hover{
+        background-color: $bg;
+      }
+    }
+    .icon-color{
+      color: $bg;
+    }
+  }
+  .panel{
+    .save-panel{
+      &-btn{
+        background-color: $bg;
+      }
+      &-header{
+        color: $bg;
+      }
+      .panel-close,.panel-full{
+        color: $bg;
+      }
+    }
+  }
+  .sudu{
+    &-item{
+      &-div{
+        color: $bg;
+      }
+      &-choose,&-div:hover{
+        background-color: $bg;
+      }
+    }
+  }
+}
+
+.theme_blue{
+  @include theme(#{$blue_color})
+}
+.theme_green{
+  @include theme(#{$green_color})
+}
+.theme_pink{
+  @include theme(#{$pink_color})
+}
+.theme_cyan{
+  @include theme(#{$cyan_color})
+}
+.theme_orange{
+  @include theme(#{$orange_color})
+}

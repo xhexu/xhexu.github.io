@@ -11,13 +11,17 @@ img{
 input{
   height: 35px !important;
 }
+code{
+  font-family: "Operator Mono SSm A", "Operator Mono SSm B", 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+}
+a{
+  text-decoration:none;
+}
+
 .over_text{
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-}
-a{
-  text-decoration:none;
 }
 ::-webkit-scrollbar {
   width: 5px;
