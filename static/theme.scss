@@ -8,34 +8,34 @@ $pink_color : #f39894;
 
 $cyan_color : #26b6be;
 
+$black_color : #242424;
+
 @mixin theme($bg) {
   .nav-bar{
     background-color: $bg;
-    border-bottom: 1px solid $bg;
   }
   .read{
     nav.read-bar{
-      box-shadow: 0 1px 2px 0 $bg;
+      box-shadow: 0 1px 1px 0 $bg;
       &-choose{
         color: $bg;
       }
-      li:hover{
-        color: $bg;
+      li:hover:not(li span.active) {
+        span{
+          width: 100%;
+          left: 0;
+          background: $bg;
+        }
+      }
+      li span.active{
+        width: 100%;
+        left: 0;
+        background: $bg;
       }
     }
   }
-  .edit{
-    &-left{
-      &-list{
-        color: $bg;
-      }
-      &-choose,&-list:hover{
-        background-color: $bg;
-      }
-    }
-    .icon-color{
-      color: $bg;
-    }
+  .el-menu{
+    background-color: $bg;
   }
   .panel{
     .save-panel{
@@ -76,4 +76,7 @@ $cyan_color : #26b6be;
 }
 .theme_orange{
   @include theme(#{$orange_color})
+}
+.theme_black{
+  @include theme(#{$black_color})
 }
