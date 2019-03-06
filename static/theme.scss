@@ -10,6 +10,7 @@ $cyan_color : #26b6be;
 
 $black_color : #242424;
 
+
 @mixin theme($bg) {
   .nav-bar{
     background-color: $bg;
